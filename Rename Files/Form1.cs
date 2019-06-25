@@ -20,8 +20,8 @@ namespace Rename_Files
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            delCharsTB.Text = "Characters/phrases to be removed, seperated by commas, enter to confirm";
-            addCharsTB.Text = "Characters/phrases to be added, seperated by commas, enter to confirm";
+            delCharsTB.Text = "Characters to be removed, seperated by commas.";
+            addCharsTB.Text = "Characters to be added, seperated by commas.";
         }
 
         private List<string> GetCharsList(string chars)
@@ -278,7 +278,7 @@ namespace Rename_Files
 
         private void delCharsCB_CheckedChanged(object sender, EventArgs e)
         {
-            delCharsTB.Text = "Characters/phrases to be removed, seperated by commas, enter to confirm";
+            delCharsTB.Text = "Characters to be removed, seperated by commas.";
             progressBar1.Value = 0;
             progressText.Text = "Progress (0/0 files renamed)";
             resultTB1.Text = "";
@@ -286,7 +286,7 @@ namespace Rename_Files
 
         private void addCharsCB_CheckedChanged(object sender, EventArgs e)
         {
-            addCharsTB.Text = "Characters/phrases to be added, seperated by commas, enter to confirm";
+            addCharsTB.Text = "Characters to be added, seperated by commas.";
             resultTB2.Text = "";
             progressBar1.Value = 0;
             progressText.Text = "Progress (0/0 files renamed)";
@@ -297,9 +297,9 @@ namespace Rename_Files
         private void delCharsTB_Enter(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.Show("Characters/phrases to be removed, seperated by commas, enter to confirm", delCharsTB, 10, -20, 3000);
+            tt.Show("Characters to be removed, seperated by commas.", delCharsTB, 10, -20, 3000);
 
-            if (delCharsTB.Text.Equals("Characters/phrases to be removed, seperated by commas, enter to confirm"))
+            if (delCharsTB.Text.Equals("Characters to be removed, seperated by commas."))
             {
                 delCharsTB.Text = "";
             }
@@ -308,9 +308,9 @@ namespace Rename_Files
         private void addCharsTB_Enter(object sender, EventArgs e)
         {
             ToolTip tt = new ToolTip();
-            tt.Show("Characters/phrases to be add, seperated by commas, enter to confirm", addCharsTB, 10, -20, 3000);
+            tt.Show("Characters to be add, seperated by commas.", addCharsTB, 10, -20, 3000);
 
-            if (addCharsTB.Text.Equals("Characters/phrases to be added, seperated by commas, enter to confirm"))
+            if (addCharsTB.Text.Equals("Characters to be added, seperated by commas."))
             {
                 addCharsTB.Text = "";
             }
